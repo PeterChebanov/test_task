@@ -1,0 +1,78 @@
+TC-1 
+	Positive scenario
+		Check after all mandatory fields provided with valid data, and button "Submit" clicked, the Reg Form disappears and user redirected to -> 
+		(page prescribed in documentation (assume Users Table in current example) )
+
+TC-2 
+	Positive scenario
+		Check registration form save the entity correctly in the table, when all mandatory fields provided with valid data
+
+TC-3
+	Check form does not send the data, in case any of mandatory fields was not provided with valid data
+
+
+TC-4 
+	Check each field of the form does not accept data length more then prescribed in requirements
+
+TC-5 
+	Check length < 2 of First Name is not allowed
+
+TC-6
+	Check length < 2 of Last Name is not allowed
+
+TC-7
+	Check field First Name accepts only letters, spaces, '.', '-' and (') symbols 
+	(positive scenario can be implemented in TC-2)  
+
+TC-8
+	Check field Second Name accepts only letters, spaces, '.', '-' and (') symbols   
+	(positive scenario can be implemented in TC-2)  
+
+TC-9
+	Check only capital letter is accepted as first char of First Name field
+
+TC-10
+	Check only capital letter is accepted as first char of Last Name field 
+
+TC-11
+	Check Email field accepts only letters, numbers, '_', '-', '.', '@'
+
+TC-12
+	Check Email field does not accept invalid email masks (ex: "che.uk", "@che.uk", "che@pe", "che-..pe@gmail.com" ect.)
+
+TC-13
+	Check Email field can not remain blank
+
+TC-14
+	Check age field does not accept any data except positive integers
+
+TC-15
+	Check Age field can not remain blank
+
+TC-16
+	Check Salary field does not accept any data except positive integers/floats/decimals (depends of the requirements)
+
+TC -17
+	Check Salary field can not remain blank
+
+TC-18 
+	Check only letter is accepted as first char of Department field (REQUIREMENTS NEEDED -> test designed only relying on logic and could be wrong)
+
+TC-19
+	Check Department field can not remain blank	
+
+================================================================================
+
+Suggestions for possible UI approvements:
+	
+	- All mandatory fields marked with '*'
+	
+	- Button submit is in inactive state unitl all mandatory fields provided with valid data
+
+	- When invalid data provided to the field, human readable error message appears (in terms to help user understand what went wrong )
+
+	- Fields Age and Salary block any inputs except positive int (for field Salary which could be float '.' or ',' symbols allowed)
+
+	- Fileds First/Last Name blocks any inputs except letters, spaces, '.', '-' and (') symbols
+
+	- If any data was provided to the fields, when "X" is clicked to leave the form without save -> comfirmation pop-up appears (if user clicks "NO" in confirmation popup, he is redirected back to the form, all the previously provided data remains in the fields )

@@ -1,0 +1,5 @@
+SELECT e.department_id, e.employee_id, e.joining_date, e.location, e.manager_id, e.name, e.salary, d.name AS department_name
+FROM Employee e
+INNER JOIN Department d
+ON e.department_id = d.department_id
+WHERE d.name = 'Shipping' AND e.salary > 5000 AND e.joining_date LIKE '%2021%';
